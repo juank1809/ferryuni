@@ -10,7 +10,7 @@ import {
   Button,
   ButtonGroup,
 } from "@nextui-org/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const [isFollowed, setIsFollowed] = React.useState(false);
