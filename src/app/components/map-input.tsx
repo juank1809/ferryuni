@@ -4,8 +4,8 @@ import React, { Dispatch, Key, SetStateAction } from "react";
 import { Autocomplete, AutocompleteItem } from "@nextui-org/react";
 interface Props {
   lugares: string[];
-  value: Key;
-  setValue: Dispatch<SetStateAction<Key>>;
+  value: any;
+  setValue: any;
 }
 
 const MapInput: React.FC<Props> = ({ lugares, setValue, value }) => {

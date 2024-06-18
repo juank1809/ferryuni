@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import TitleHeader from "./components/title-header";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();

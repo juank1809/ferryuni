@@ -5,7 +5,7 @@ import MapInput from "../components/map-input";
 import dynamic from "next/dynamic";
 import { use, useEffect, useMemo, useState } from "react";
 import { Button } from "@nextui-org/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const localizaciones = {
   "Universidad Tecnologica": [9.022283475120235, -79.53188375397403],
@@ -16,7 +16,9 @@ const localizaciones = {
 };
 
 export default function Page() {
-  const [value, setValue] = useState<React.Key>("Universidad Tecnologica");
+  const [value, setValue] = useState<keyof typeof localizaciones>(
+    "Universidad Tecnologica"
+  );
   const router = useRouter();
 
   const Map = useMemo(
@@ -28,7 +30,6 @@ export default function Page() {
     [value]
   );
 
-  console.log("LOCALIZACIONESS", localizaciones[value]);
   return (
     <>
       <TitleHeader>Encuentra un ferry</TitleHeader>
@@ -38,7 +39,10 @@ export default function Page() {
         setValue={setValue}
       />
       <div className="bg-white-700 mx-auto my-5 w-[98%] h-[480px]">
-        <Map posix={localizaciones[value]} />
+        {
+          // @ts-ignore
+        }
+        <Map posix={localizaciones[value] as any} />
       </div>
 
       <Button
