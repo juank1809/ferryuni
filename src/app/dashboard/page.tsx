@@ -108,7 +108,7 @@ export default function Page() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card con número total de usuarios */}
         <Card className="flex justify-start space-x-5 items-center p-4">
-          <ProgressCircle value={totalUsuarios} max={1000} size="md" />
+          <ProgressCircle value={totalUsuarios}  size="md" />
           <div>
             <p className="text-tremor-default text-tremor-content-strong dark:text-dark-tremor-content-strong font-medium">
               Total de usuarios activos: {totalUsuarios}
