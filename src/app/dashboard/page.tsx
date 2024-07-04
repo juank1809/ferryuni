@@ -118,7 +118,7 @@ export default function Page() {
 
         {/* Card con cantidad de conductores activos */}
         <Card className="flex justify-start space-x-5 items-center p-4">
-          <ProgressCircle value={conductoresActivos} max={200} size="md" />
+          <ProgressCircle value={conductoresActivos}  size="md" />
           <div>
             <p className="text-tremor-default text-tremor-content-strong dark:text-dark-tremor-content-strong font-medium">
               Conductores activos: {conductoresActivos}
